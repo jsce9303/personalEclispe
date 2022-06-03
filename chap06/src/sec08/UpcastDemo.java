@@ -11,7 +11,7 @@ public class UpcastDemo {
 		System.out.println(s.number);
 		
 		Student s2 = (Student) p;
-		//자식 클래스인 s는 부모 클래스p의 메소드도 쓸 수 있다.
+		//자식 클래스인 s는 부모 클래스p의 메소드도 쓸 수 있다111
 		s.whoami();
 		s.work();
 	}
