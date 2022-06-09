@@ -2,10 +2,9 @@ package practice;
 import java.util.*;
 public class Main2 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 		int numOfStudents = 0;
 		int[] scores;
-		Scanner in = new Scanner(System.in);
 		
 		System.out.println("학생의 수 ?");
 		numOfStudents = in.nextInt();
@@ -18,7 +17,7 @@ public class Main2 {
 		
 		System.out.println(numOfStudents +  "명의 학생 성적은 다음과 같습니다.");
 		for (int x : scores) {
-			System.out.print(x + " ");
+			System.out.print(x + " "); //for each 구문
 		}
 		
 		for (int i = 0; i < scores.length; i++) {
@@ -31,7 +30,7 @@ public class Main2 {
 		else if (scores[i] >=60)
 			System.out.println((i+1) +"번 학생의 등급은 D 입니다.");
 		else
-			System.out.println((i+1) +"번 학생의 등급은 F 입니다.");
+			System.out.println((i+1) +"번 학생의 등급은 E 입니다.");
 		}
 }
 }

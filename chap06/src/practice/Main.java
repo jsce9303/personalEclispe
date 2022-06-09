@@ -11,7 +11,7 @@ public class Main {
 				x= e+24 - a;
 			}else if(a<e&&(f==0&&g==0)) {
 				x = e-a;
-			}else if(a<e&&(b>f||(c>g&&b>=f))){
+			}else if(a<e&&(b>f||(c>=g&&b>=f))){
 				x = e-a-1;
 			}
 			System.out.println(x+" "+y+" "+z);
