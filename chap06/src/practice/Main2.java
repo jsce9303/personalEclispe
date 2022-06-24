@@ -9,5 +9,5 @@ public class Main2 {
 			B = sc.nextInt();
 			System.out.println(A+B);
 		}
-}
+    }
 }
