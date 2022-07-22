@@ -1,44 +1,51 @@
 package Challenger;
 
-public interface Countable { 
+
+
+abstract class Countable { 
+
+	protected String name;
+	protected int num;
 	
-	public abstract void count(); 
+	Countable(String name,int num){
+		this.name=name;
+		this.num=num;
+	}
+	
+	abstract void count(); 
 	
 }
 
-class Bird implements Countable{
-	String name;
+class Bird extends Countable{
 	
-	public Bird(String name) {
-		 this.name = name;
+	Bird(String name,int num) {
+		super(name, num);
 	}
 	
 	
 	void fly() {
-		System.out.println("2마리 " + name + "가 날아간다.");
+		System.out.println(num+ "마리 " + name + "가 날아간다.");
 	}
 
-	public void count() {
-		System.out.println(name + "가 2마리 있다.");
-		
+	void count() {
+		System.out.println(name + "가 "+ num  + "마리 있다.");
 	}
 	
 }
 
-class Tree implements Countable {
-	
-	String name;
+class Tree extends Countable {
 
-	public Tree(String name) {
-		 this.name = name;
+	Tree(String name,int num) {
+		super(name, num);
 	}
 	
 	void ripen() {
-		System.out.println(name  + "에 열매가 잘 익었다.");
+		System.out.println(num + "그루 " + name  + "에 열매가 잘 익었다.");
 	}
 
-	public void count() {
-		System.out.println(name + "가 5그루 있다.");
+	void count() {
+		System.out.println(name + "가 " + num + "그루 있다.");
 	}
 }
+
 
